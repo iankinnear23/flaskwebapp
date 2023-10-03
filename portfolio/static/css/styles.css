@@ -1,0 +1,317 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: grid;
+  grid-template-columns: 0fr 1fr 0fr;
+  grid-template-rows: auto 1fr auto;
+  grid-template-areas:
+    "header header header"
+    "nav main aside"
+    "footer footer footer";
+  min-height: 100vh;
+}
+
+.header {
+  grid-area: header;
+  background-color: #333;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+.logo {
+  font-size: 24px;
+  color: white;
+  padding: 20px;
+}
+
+.navbar {
+  background-color: #333;
+  padding-top: 10px;
+}
+
+.nav-list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.nav-item {
+  margin: 0 20px;
+}
+
+.nav-item a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.nav-item a:hover {
+  color: #f0f0f0;
+}
+
+.main-section_homepage {
+  grid-area: main;
+}
+
+.home_page_img {
+  max-width: calc(100% - 40px);
+  max-height: 600px;
+  border: 2px solid #000;
+  overflow: hidden;
+  margin: 20px auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.home_page_img img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: cover;
+}
+
+.footer {
+  grid-area: footer;
+  background-color: #333;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+.menu-toggle {
+  display: none;
+}
+
+/* Styling for contact page */
+
+.main-contact-section {
+  grid-area: main;
+  padding-bottom: 80px;
+}
+.contact-section h1 {
+  text-align: center;
+  color: black;
+  padding: 20px;
+}
+
+.contact-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.contact-section li {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  margin: 10px;
+  padding: 70px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.contact-section li strong:first-child {
+  color: #eb1e1e;
+}
+
+.contact-section li strong:nth-child(2) {
+  color: #0077cc;
+}
+
+.contact-section li strong:nth-child(3) {
+  color: #00a63f;
+}
+
+/* About page styling  */
+
+.main_section_about {
+  grid-area: main;
+  padding-bottom: 80px;
+  padding-top: 20px;
+}
+
+.section_about {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #f0f0f0;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.about-me {
+  text-align: left;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+  text-align: center;
+  font-size: 32px;
+  color: #333;
+}
+
+p {
+  font-size: 18px;
+  color: #666;
+  margin-top: 10px;
+}
+
+.about_img {
+  max-width: 100%;
+  border-radius: 10%;
+}
+
+/* styling for fixtures page */
+.main_section_fixtures {
+  grid-area: main;
+  padding-bottom: 80px;
+}
+
+.h1_fixtures {
+  padding-top: 20px;
+}
+
+table {
+  width: 80%;
+  margin: 20px auto;
+  border-collapse: collapse;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+th,
+td {
+  padding: 10px;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+}
+
+thead {
+  background-color: #333;
+  color: #fff;
+}
+
+tbody tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* subscribe page styling */
+.form_section {
+  grid-area: main;
+  padding-top: 40px;
+}
+#h2_form {
+  color: #eb1e1e;
+  padding-bottom: 30px;
+}
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  text-align: center;
+  margin-top: 20px;
+}
+
+form {
+  max-width: 400px;
+  margin: 0 auto;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+input[type="submit"] {
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+input[type="submit"]:hover {
+  background-color: #0056b3;
+}
+
+@media screen and (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+    cursor: pointer;
+    font-size: 24px;
+    color: white;
+  }
+
+  .nav-list {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background-color: #333;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    right: 0;
+  }
+
+  .nav-list.active {
+    display: flex;
+  }
+
+  .nav-item {
+    margin: 10px 0;
+  }
+
+  .article-box {
+    margin-bottom: 10px;
+  }
+  .article-container {
+    padding-bottom: 80px;
+  }
+  .main-section_homepage {
+    padding-top: 80px;
+  }
+
+  .form-container {
+    height: 70%;
+    margin-top: 30px;
+  }
+}
